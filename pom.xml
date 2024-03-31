@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>wiki-consumer</module>
         <module>wiki-producer</module>
     </modules>
 
