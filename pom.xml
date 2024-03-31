@@ -13,9 +13,17 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>wiki</name>
     <description>wiki</description>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>wiki-producer</module>
+    </modules>
+
     <properties>
-        <java.version>17</java.version>
+        <java.version>19</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,6 +48,16 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-collections</groupId>
+                    <artifactId>commons-collections</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bitbucket.b_c</groupId>
+                    <artifactId>jose4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
